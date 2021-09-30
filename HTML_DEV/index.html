@@ -1,0 +1,30 @@
+<!--Copyright 2018 - 2019 David Romanski (Socke). All Rights Reserved.-->
+<!doctype html>
+<html lang="us">
+
+<head>
+    <!-- disable zoom on touchscreens-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
+    <link href="css/disableSelection.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/HTMLMenuUE4Connector.js"></script>
+    <script src="js/src/core.js"></script>
+    <script src="js/src/hmac.js"></script>
+    <script src="js/src/md5.js"></script>
+    <script src="js/src/sha1.js"></script>
+    <script src="js/src/sha256.js"></script>
+    <script src="js/src/sha512.js"></script>
+    <script>
+        function make_MD5(secret) {
+
+            var hash1 = CryptoJS.MD5(secret);
+            var hash2 = CryptoJS.HmacSHA1.encrypt("Message", "Secret Passphrase");
+            triggerUE4EventBlank("Make_MD5_ready", hash1);
+        }
+    </script>
+
+    <body>
+        Hallo World
+    </body>
+
+</html>

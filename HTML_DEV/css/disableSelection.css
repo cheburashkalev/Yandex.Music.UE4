@@ -1,0 +1,7 @@
+/*Copyright 2018 - 2019 David Romanski (Socke). All Rights Reserved.*/
+body{
+	-webkit-user-select: none;  
+	-moz-user-select: none;    
+	-ms-user-select: none;      
+	user-select: none;
+}
